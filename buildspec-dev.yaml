@@ -28,12 +28,11 @@ phases:
     commands:
       - chmod +x ./tools/db/start.sh
       - ./tools/db/start.sh
-      - docker ps
-      - sleep 10
-      - chmod +x ./tools/db/update-mysql-grant.sh
-      - ./tools/db/update-mysql-grant.sh
+      - docker ps -a
       - chmod +x ./tools/install_all_node_modules.sh
       - ./tools/install_all_node_modules.sh
+      - chmod +x ./tools/db/update-mysql-grant.sh
+      - ./tools/db/update-mysql-grant.sh
     finally:
       - echo "=========================="
       - echo "mysql on docker ready, npm modules installed"
