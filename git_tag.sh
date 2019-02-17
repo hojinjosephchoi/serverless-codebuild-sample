@@ -2,7 +2,7 @@
 
 CURRENT_DATE=$(date +%s)
 
-TAG_NAME=`buildbot@$CURRENT_DATE`
+TAG_NAME=buildbot@$CURRENT_DATE
 
 git tag $TAG_NAME
 
