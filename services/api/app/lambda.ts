@@ -5,7 +5,7 @@ const lambda = new AWS.Lambda({ region: 'ap-northeast-2' });
 
 export async function handler(event, context) {
   try {
-    console.log('[api] >> before call back service..');
+    console.log('[api] >> before call back service....');
     const environment = process.env.NODE_ENV;
     const result = await lambda.invoke({
       FunctionName: `service-back-${environment}-app`,
